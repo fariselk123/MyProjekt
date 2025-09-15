@@ -29,9 +29,22 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(v ->
+        // Klick-Listener für den "Neuen Vertrag anlegen" Button
+        binding.buttonNewContract.setOnClickListener(v ->
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment)
+        );
+
+        // Klick-Listener für den "Vertragsübersicht" Button
+        binding.buttonOverview.setOnClickListener(v ->
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_overviewFragment)
+        );
+
+        // Klick-Listener für den "Profil & Einstellungen" Button
+        binding.buttonProfile.setOnClickListener(v ->
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_profileFragment)
         );
     }
 
