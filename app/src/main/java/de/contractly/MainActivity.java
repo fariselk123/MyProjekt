@@ -74,4 +74,14 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    /**
+     * Ermöglicht den Zugriff auf das Binding-Objekt der Aktivität.
+     * Dies ist nützlich für Fragmente, die Views der Aktivität manipulieren müssen.
+     *
+     * @return Das ActivityMainBinding-Objekt.
+     */
+    public ActivityMainBinding getBinding() {
+        return binding;
+    }
 }
